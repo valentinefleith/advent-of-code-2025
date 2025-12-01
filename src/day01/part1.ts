@@ -29,8 +29,7 @@ function getPassword(instructions: string[]) {
 
 function main() {
     const inputFile = 'inputs/input.txt';
-    const lines = getLines(__dirname, inputFile);
-    const password = getPassword(lines);
+    const password = getPassword(getLines(__dirname, inputFile));
     console.log(password);
 }
 
