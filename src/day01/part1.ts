@@ -1,11 +1,11 @@
 import {getLines} from '../utils';
 
-enum Direction {
+export enum Direction {
     Left,
     Right
 }
 
-class Rotation {
+export class Rotation {
     public constructor(
         public direction: Direction,
         public distance: number
@@ -13,7 +13,7 @@ class Rotation {
     }
 }
 
-function parseInstruction(instruction: string): Rotation {
+export function parseInstruction(instruction: string): Rotation {
     return new Rotation(instruction[0] === 'L' ? Direction.Left : Direction.Right, parseInt(instruction.slice(1)));
 }
 
@@ -22,7 +22,7 @@ function getPassword(instructions: string[]) {
     let currentCombination = 50;
     return instructions.map(instruction => {
         const parsed = parseInstruction(instruction);
-        parsed.direction === Direction.Left? currentCombination += parsed.distance : currentCombination -= parsed.distance;
+        parsed.direction === Direction.Left? currentCombination -= parsed.distance : currentCombination += parsed.distance;
         return currentCombination % 100 === 0 ? 1 : 0
     }).reduce((acc, curr) => acc + curr, password);
 }
