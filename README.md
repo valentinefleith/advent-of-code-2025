@@ -1,11 +1,6 @@
-# advent-of-code-2025
+# Advent-of-code-2025
 
-<img width="711" height="590" alt="image" src="https://github.com/user-attachments/assets/8f7e3795-f481-4eb3-9a94-b7050e2fe31b" />
+<img width="716" height="616" alt="image" src="https://github.com/user-attachments/assets/2ba3d1d3-5787-4e04-895e-025005af877b" />
 
-
-
-run one day:
-
-```sh
-npx ts-node src/day01/part1.ts
-```
+- **Day 1** : [`Part 1`](/src/day01/part1.ts) :star: | [`Part 2`](/src/day01/part2.ts) :star2:
+- **Day 2** : [`Part 1`](/src/day02/parts1-2.ts) :star: | [`Part 2`](/src/day02/parts1-2.ts) :star2:
