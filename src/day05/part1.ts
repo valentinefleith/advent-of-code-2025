@@ -10,7 +10,7 @@ function main() {
     const lines = getLines(__dirname, inputFile);
     const separator = lines.indexOf('');
     const parsed = {
-        rules: lines.slice(0, separator).map(r => r.split('-').map(i => parseInt(i))).sort(),
+        rules: lines.slice(0, separator).map(r => r.split('-').map(i => parseInt(i))),
         ids: lines.slice(separator + 1).map(id => parseInt(id))
     };
     console.log(getFresh(parsed));
